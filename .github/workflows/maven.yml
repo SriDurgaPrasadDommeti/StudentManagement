@@ -36,7 +36,7 @@ jobs:
 
       - name: Build JAR
 
-        run: mvn -B package -DskipTests --file StudentManagement/pom.xml
+        run: mvn -B package -DskipTests --file StudentManagementSystem/pom.xml
  
       # Step 4: Auto-generate Dockerfile
 
@@ -48,7 +48,7 @@ jobs:
 
           echo 'WORKDIR /app' >> Dockerfile
 
-          echo 'COPY StudentManagement/target/*.jar app.jar' >> Dockerfile
+          echo 'COPY StudentManagementSystem/target/*.jar app.jar' >> Dockerfile
 
           echo 'EXPOSE 8080' >> Dockerfile
 
